@@ -1,12 +1,8 @@
 import "./App.css";
 import React from "react";
 import Home from "./components/Home";
-import Search from "./components/Search";
-import Header from "./components/Header";
-import WeeklyWeather from "./components/WeeklyWeather";
-import Container from "react-bootstrap/Container";
-import WeatherToday from "./components/WeatherToday";
-
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import WeatherDisplay from "./components/WeatherDisplay";
 function App() {
   /*useLayoutEffect(() => {
     document.body.style.backgroundColor = "blue";
@@ -14,13 +10,20 @@ function App() {
 
   return (
     <div className="App">
-      <Header />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/weather" element={<WeatherDisplay />} />
+        </Routes>
+      </BrowserRouter>
+
+      {/*<Header />
       <Container fluid="md">
         <Search />
         <WeatherToday />
         <Home />
         <WeeklyWeather />
-      </Container>
+      </Container> */}
     </div>
   );
 }

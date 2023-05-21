@@ -1,0 +1,40 @@
+.weatherCard {
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+}
+
+.topleft {
+  position: absolute;
+  top: 0;
+  left: 16px;
+}
+
+.bottomleft {
+  position: absolute;
+  bottom: 0;
+  left: 16px;
+}
+
+.middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: rgb(88, 12, 29);
+  font-family: "Courier New", Courier, monospace;
+  font-size: 30px;
+}
+
+.weatherCard {
+  width: 60%;
+  height: 60rem;
+  display: flex;
+  padding: 20;
+  background-color: "#eee";
+  align-items: "center";
+  margin-left: "auto";
+  margin-right: "auto";
+}

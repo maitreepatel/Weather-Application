@@ -1,9 +1,23 @@
 import React, { PureComponent } from "react";
-
+import Button from "react-bootstrap/Button";
+import WeatherDisplay from "./WeatherDisplay";
 export class Home extends PureComponent {
   render() {
-    return <div></div>;
+    return (
+      <div>
+        <div className="middle">
+          <p>
+            <b>Welcome To The Weather Application</b>
+          </p>
+          <p>
+            <i>Check Out Weather Forcast For Any City In The World</i>
+          </p>
+          <a href="/weather">
+            <Button variant="dark">See Full Weather Details</Button>
+          </a>
+        </div>
+      </div>
+    );
   }
 }
-
 export default Home;
