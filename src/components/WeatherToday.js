@@ -1,5 +1,6 @@
 import React from "react";
 import { Card, ListGroup } from "react-bootstrap";
+/** This function displays detailed information of today's weather */
 function WeatherToday(props) {
   const { data } = props;
   const todaysData = data[0];

@@ -1,14 +1,12 @@
 const API_URL = "https://api.tomorrow.io/v4";
-
+/** This class component is to fetch data from API */
 class ApiService {
   async fetchData(seachTerm) {
     try {
-      // const response = await fetch(
-      //   `${API_URL}/weather/forecast?location=${seachTerm}&apikey=bcQ5WmQP3A6vP3FiEy2npE5SRa6wOP5K`
-      // );
       const response = await fetch(
-        "https://mocki.io/v1/72bcafc3-2c05-42af-ab23-945808f58afc"
+        `${API_URL}/weather/forecast?location=${seachTerm}&apikey=bcQ5WmQP3A6vP3FiEy2npE5SRa6wOP5K`
       );
+
       if (!response.ok) {
         throw new Error("Network response was not ok");
       }

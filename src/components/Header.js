@@ -1,9 +1,6 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCoffee, faCloud } from "@fortawesome/free-solid-svg-icons";
 import React from "react";
-import { Navbar, Container } from "react-bootstrap";
+/** This function implements header of an application */
 function Header() {
-  const element = <FontAwesomeIcon icon={faCloud} />;
   return (
     <div>
       <h1>

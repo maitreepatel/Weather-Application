@@ -1,15 +1,15 @@
-import React, { Component, useState } from "react";
+import React, { Component } from "react";
 import Search from "./Search";
 import Header from "./Header";
 
-import { Container, Row, Col, Card } from "react-bootstrap";
+import { Container, Row, Card } from "react-bootstrap";
 
 import "../css/StylingFile.css";
-import FetchData from "./FetchData";
-import data from "./data.json";
+
 import ApiService from "../Service";
-import HourlyWeather from "./HourlyWeather";
+
 import Main from "./Main";
+/** This class component receives data and passes the data to its render component  */
 class WeatherDisplay extends Component {
   constructor(props) {
     super(props);
@@ -18,7 +18,6 @@ class WeatherDisplay extends Component {
       loading: true,
     };
     this.apiService = new ApiService();
-    //console.log("Hiiiiiiiiiiiiiiiiiiiiiiiii", this.state.weatherData);
   }
   handleDataChange = (newData) => {
     this.setState({ data: newData });

@@ -4,7 +4,7 @@ import { Table } from "react-bootstrap";
 import { Row, Col } from "react-bootstrap";
 function WeeklyWeather(props) {
   const weeklyData = props.data;
-
+  /** This function displays weekly weather data (max and min temp of a week) */
   return (
     <div>
       <Accordion defaultActiveKey="0">

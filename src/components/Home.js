@@ -1,6 +1,6 @@
 import React, { PureComponent } from "react";
 import Button from "react-bootstrap/Button";
-import WeatherDisplay from "./WeatherDisplay";
+/** this is a home page component */
 export class Home extends PureComponent {
   render() {
     return (

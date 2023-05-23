@@ -1,23 +1,22 @@
 import { Component } from "react";
 import WeeklyWeather from "./WeeklyWeather";
-import { Container, Row, Col, Card } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import WeatherToday from "./WeatherToday";
 
 import HourlyWeather from "./HourlyWeather";
 import Widgets from "./Widgets";
+/** This component modularize the UI in app */
 class Main extends Component {
   constructor(props) {
     super(props);
   }
-
   render() {
     const { data, loading } = this.props;
-    //console.log(data, loading);
+    console.log(data);
     if (loading) {
       return <div>Loading...</div>;
     }
-
-    const { timelines } = data[0];
+    const { timelines } = data;
     const { hourly, daily } = timelines;
     console.log("--------main-------------", daily);
 

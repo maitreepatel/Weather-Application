@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Form, InputGroup } from "react-bootstrap";
 import ApiService from "../Service";
+/** This component manages search functioality in application */
 class Search extends Component {
   constructor(props) {
     super(props);

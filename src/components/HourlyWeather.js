@@ -1,17 +1,15 @@
 import Accordion from "react-bootstrap/Accordion";
 import React from "react";
-import { Card, ListGroup, Table } from "react-bootstrap";
-import { Container, Row, Col } from "react-bootstrap";
+import { Table } from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
+/** This component displays hourly weather forecast. */
 function HourlyWeather(props) {
   const hourlyData = props.data;
-  //const weeklyData = props.weeklyData;
-  //console.log(hourlyData, "))))))))))))))))))))))))");
   return (
     <div>
       <Accordion defaultActiveKey="0">
         <Accordion.Item eventKey="0">
           <Accordion.Header>Hourly Forecast</Accordion.Header>
-
           <Accordion.Body>
             <Row>
               <Col>
@@ -28,7 +26,6 @@ function HourlyWeather(props) {
                   </tr>
                 </Table>
               </Col>
-
               {hourlyData.slice(0, 12).map((item, i) => {
                 var Time = item.time.split("T")[1].split(":00Z")[0];
 
