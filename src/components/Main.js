@@ -7,18 +7,14 @@ import HourlyWeather from "./HourlyWeather";
 import Widgets from "./Widgets";
 /** This component modularize the UI in app */
 class Main extends Component {
-  constructor(props) {
-    super(props);
-  }
   render() {
     const { data, loading } = this.props;
-    console.log(data);
+
     if (loading) {
       return <div>Loading...</div>;
     }
     const { timelines } = data;
     const { hourly, daily } = timelines;
-    console.log("--------main-------------", daily);
 
     return (
       <div>
