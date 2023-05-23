@@ -27,4 +27,4 @@ React-Bootstrap
 
 ### Functionality
 
-Seach weather of a city by typing the city name + hit enter to get the results
+Seach weather of a city by typing the city name + hit "search" button to get the results
