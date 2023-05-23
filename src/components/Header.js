@@ -1,24 +1,19 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCoffee, faCloud } from "@fortawesome/free-solid-svg-icons";
 import React from "react";
 import { Navbar, Container } from "react-bootstrap";
-import {
-  WiMoonAltWaningCrescent5,
-  WiMoonAltWaxingCrescent2,
-} from "react-icons/wi";
-
 function Header() {
+  const element = <FontAwesomeIcon icon={faCloud} />;
   return (
-    <Navbar bg="light" expand="lg">
-      <Container className="justify-content-center">
-        <Navbar.Brand>
-          <h1>
-            {" "}
-            <WiMoonAltWaningCrescent5 /> Let's Explore Weather Today{" "}
-            <WiMoonAltWaxingCrescent2 />
-          </h1>
-        </Navbar.Brand>
-      </Container>
-    </Navbar>
+    <div>
+      <h1>
+        <span fontSize="140px">&#9925;</span>
+        Today's Weather <span fontSize="140px">&#9925;</span>
+      </h1>
+      <h5>
+        <i>Search here to know weather of your city</i>
+      </h5>
+    </div>
   );
 }
-
 export default Header;

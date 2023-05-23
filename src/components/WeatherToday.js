@@ -1,47 +1,40 @@
 import React from "react";
 import { Card, ListGroup } from "react-bootstrap";
 function WeatherToday(props) {
-  //console.log("HI", props.data[0].timelines.minutely[0].values);
+  const { data } = props;
+  const todaysData = data[0];
+  var Time =
+    todaysData.time.split("T")[0] +
+    " " +
+    todaysData.time.split("T")[1].split(":00Z")[0];
   return (
-    <Card border="danger" className="weatherCard">
-      <Card.Body>
-        <Card.Title>Today's Weather</Card.Title>
-        <Card.Text>Time : {props.data[0].timelines.minutely[0].time}</Card.Text>
-      </Card.Body>
+    <Card className="weatherCard">
       <ListGroup className="list-group-flush">
+        <h2 textAlign="center">
+          <span fontSize="250px">&#x1F324;</span>{" "}
+          {todaysData.values.temperatureAvg}' C
+        </h2>
         <ListGroup.Item>
-          Temperature : {props.data[0].timelines.minutely[0].values.temperature}
-          ' C
+          <span fontSize="400px">&#8986;</span> Date : {Time}
         </ListGroup.Item>
         <ListGroup.Item>
-          Wind Speed : {props.data[0].timelines.minutely[0].values.windSpeed}{" "}
-          KM/H
+          <span fontSize="140px">&#x1F321;</span> Temperature :{" "}
+          {todaysData.values.temperatureMax}' C |{" "}
+          {todaysData.values.temperatureMin}' C
         </ListGroup.Item>
         <ListGroup.Item>
-          Humidity : {props.data[0].timelines.minutely[0].values.windSpeed} %{" "}
+          <span fontSize="140px"> &#x2601;</span> Clowdy :{" "}
+          {todaysData.values.cloudBaseAvg * 100} %
         </ListGroup.Item>
         <ListGroup.Item>
-          Visibility : {props.data[0].timelines.minutely[0].values.visibility}{" "}
-          KM
+          <span fontSize="140px"> &#x26C8;</span> Rain :{" "}
+          {todaysData.values.freezingRainIntensityAvg * 100} %
         </ListGroup.Item>
         <ListGroup.Item>
-          Precipitation Probability :{" "}
-          {props.data[0].timelines.minutely[0].values.precipitationProbability}{" "}
-          %
+          <span fontSize="140px">&#x2603;</span> Snow :{" "}
+          {todaysData.values.iceAccumulationAvg * 100} %
         </ListGroup.Item>
       </ListGroup>
-      <Card.Body>
-        <div>
-          <Card.Text>
-            Sunrise Time : {props.data[0].timelines.daily[0].values.sunriseTime}{" "}
-            %
-          </Card.Text>
-          <Card.Text>
-            Sunrise Time : {props.data[0].timelines.daily[0].values.sunsetTime}{" "}
-            %
-          </Card.Text>
-        </div>
-      </Card.Body>
     </Card>
   );
 }
